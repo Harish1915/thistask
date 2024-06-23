@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function car(){
+           console.log(this);
+        }
+obj= {
+
+Make: 2021,
+Model : "Toyota"
+} 
+
+car.call(obj); // o/p{Make: 2021, Model: 'Toyota'}
+
+
+
+
+
+
+function car1(){
+    console.log("This car is a " + this.Make + " Toyota " + this.Model);
+}
+
+    obj2={
+        Make:2021,
+        Model:"Camry"
+    }  
+    
+    car1.call(obj2); // o/p This car is a 2021 Toyota Camry
+    </script>
+</body>
+</html>

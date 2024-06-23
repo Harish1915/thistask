@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function hi(color,owned){
+            console.log("This car is a " + this.Make + " Toyota " + this.Model + " is " + color + "and owned by " + owned);
+        }
+        obj={
+
+            Make:2021,
+            Model:"Camry"
+        }
+   var hiBind= hi.bind(obj, "red" , "Alice");
+   hiBind();
+
+    </script>
+</body>
+</html>
